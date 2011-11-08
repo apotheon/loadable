@@ -36,9 +36,12 @@ Installing via RubyGems follows the usual pattern.
 To automatically load both the Gem and Ruby hooks, and the entire Loadable
 system, add `loadable` to your RUBYOPT environment variable.
 
-    $ export RUBYOPT="-rloadable"
+    export RUBYOPT="-rloadable"
 
-Place this in your shell's configuration file, such as `~/.bashrc`.
+Place this in your shell's configuration file, such as `~/.bashrc`.  For csh
+syntax (e.g. in `~/.cshrc`), use this:
+
+    setenv RUBYOPT "-rloadable"
 
 If you do not want the default setup you can `require 'loadable/system'` instead.
 This will load in Loadable system, but only add an `OriginalLoader` to the
